@@ -1,0 +1,27 @@
+.container-3 {
+  padding: 10px;
+  font-style: italic;
+  margin: 0 auto;
+  width: 75%;
+  text-align: center;
+  background-color: floralwhite;
+}
+.flex-box-rps {
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-box-rps-div {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.flex-box-rps img:hover{
+  box-shadow: 0px 5px 30px lightgreen;
+}
+
+
