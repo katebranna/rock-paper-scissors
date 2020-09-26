@@ -1,5 +1,5 @@
 function rpsGame(yourChoice) {
-  var humanChoice, botChoice;
+  let humanChoice, botChoice;
   humanChoice = yourChoice.id;
   botChoice = getBotChoice(getRandomNumber());
   //alert(botChoice);
@@ -19,14 +19,14 @@ function getBotChoice(number) {
 }
 
 function getWinner(yourChoice, computerChoice) {
-  var resultsDatabase = {
+  let resultsDatabase = {
     'rock': {'scissors': 1, 'rock': 0.5, 'paper': 0},
     'paper': {'rock': 1, 'paper': 0.5, 'scissors': 0},
     'scissors': {'paper': 1, 'scissors': 0.5, 'rock': 0},
   };
 
-  var yourScore = resultsDatabase[yourChoice][computerChoice] 
-  var computerScore = resultsDatabase[computerChoice][yourChoice]
+  let yourScore = resultsDatabase[yourChoice][computerChoice] 
+  let computerScore = resultsDatabase[computerChoice][yourChoice]
 
   return [yourScore, computerScore];
 }
@@ -48,7 +48,7 @@ function displayFrontEnd(getMessage, humanChoice, botChoice) {
   document.getElementById('scissors').remove();
 
   //create divs for results
-  var messageDiv = document.createElement('div');
+  let messageDiv = document.createElement('div');
 
   messageDiv.innerHTML = "<h1 style='color: " + getMessage['color'] + "; '>" + "You picked " + humanChoice  + ".  " + "Bot picked " + botChoice + ".  " + getMessage['message'] + "</h1>"; 
 
